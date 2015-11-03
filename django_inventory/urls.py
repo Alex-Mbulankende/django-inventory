@@ -5,12 +5,6 @@ from django.contrib import admin
 admin.autodiscover()
 
 urlpatterns = patterns('',
-    # ----Django
-    (r'^admin/', include(admin.site.urls)),
-
-    #(r'^i18n/', include('django.conf.urls.i18n')),
-
-    # ----Project
     (r'^', include('main.urls')),
     (r'^common/', include('common.urls')),
     (r'^inventory/', include('inventory.urls')),
