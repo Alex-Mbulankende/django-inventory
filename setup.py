@@ -53,7 +53,7 @@ def find_packages(directory):
     return packages
 
 install_requires = """
-Django==1.6.5
+Django=>1.6.5,<1.7.0
 Pillow==2.5.1
 South==1.0
 django-compressor==1.4
@@ -76,6 +76,7 @@ setup(
         'Development Status :: 5 - Production/Stable',
         'Environment :: Web Environment',
         'Framework :: Django',
+        'Framework :: Django :: 1.6',
         'Intended Audience :: Developers',
         'Intended Audience :: Information Technology',
         'License :: OSI Approved :: Apache Software License',
@@ -94,7 +95,6 @@ setup(
     name=PACKAGE_NAME,
     packages=find_packages(PACKAGE_DIR),
     platforms=['any'],
-    scripts=['django_inventory/bin/django-inventory.py'],
     url='https://github.com/rosarior/django-inventory',
     version=django_inventory.__version__,
     zip_safe=False,
